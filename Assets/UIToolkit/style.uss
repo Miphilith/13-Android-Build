@@ -29,3 +29,37 @@
     right: 20%;
     overflow: hidden;
 }
+
+.unity-text-element--inner-input-field-component {
+    color: rgb(231, 191, 166);
+    right: auto;
+    margin-right: 0;
+    -unity-text-align: middle-left;
+    font-size: 45px;
+    -unity-font-style: italic;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.unity-base-text-field__input {
+    background-image: url('project://database/Assets/Gentleland/SteampunkUI/Art/Steampunk_UI_Slots_Arrows.png?fileID=4508516164457878799&guid=4d6d3e529a32a4141bbac8264745777d&type=3#Steampunk_UI_Slots_Arrows_9');
+    padding-left: 3%;
+}
+
+.inputs {
+    flex-grow: 1;
+    position: absolute;
+    width: 75%;
+    height: 17%;
+    align-self: center;
+    justify-content: flex-start;
+    align-items: auto;
+    flex-direction: row;
+    right: auto;
+    top: 50%;
+    background-image: url('project://database/Assets/Gentleland/SteampunkUI/Art/Steampunk_UI_Slots_Arrows.png?fileID=-4972393294115483615&guid=4d6d3e529a32a4141bbac8264745777d&type=3#Steampunk_UI_Slots_Arrows_8');
+    padding-left: 0;
+}
