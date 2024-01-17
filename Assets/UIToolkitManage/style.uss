@@ -35,7 +35,7 @@
     right: auto;
     margin-right: 0;
     -unity-text-align: middle-left;
-    font-size: 40px;
+    font-size: 95%;
     -unity-font-style: italic;
     white-space: nowrap;
     border-top-left-radius: 0;
@@ -44,11 +44,27 @@
     border-bottom-left-radius: 0;
     opacity: 1;
     position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
 }
 
 .unity-base-text-field__input {
     background-image: url('project://database/Assets/Gentleland/SteampunkUI/Art/Steampunk_UI_Slots_Arrows.png?fileID=4508516164457878799&guid=4d6d3e529a32a4141bbac8264745777d&type=3#Steampunk_UI_Slots_Arrows_9');
     padding-left: 3%;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    height: 100%;
+    width: 100%;
 }
 
 .inputs {
