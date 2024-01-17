@@ -35,13 +35,15 @@
     right: auto;
     margin-right: 0;
     -unity-text-align: middle-left;
-    font-size: 45px;
+    font-size: 40px;
     -unity-font-style: italic;
     white-space: nowrap;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+    opacity: 1;
+    position: relative;
 }
 
 .unity-base-text-field__input {
@@ -62,4 +64,58 @@
     top: 50%;
     background-image: url('project://database/Assets/Gentleland/SteampunkUI/Art/Steampunk_UI_Slots_Arrows.png?fileID=-4972393294115483615&guid=4d6d3e529a32a4141bbac8264745777d&type=3#Steampunk_UI_Slots_Arrows_8');
     padding-left: 0;
+}
+
+.unity-base-field__label {
+    color: rgb(231, 191, 166);
+    opacity: 0.5;
+    position: relative;
+    width: 30%;
+    height: 100%;
+    overflow: visible;
+    margin-left: 3%;
+}
+
+.Button {
+    width: 25%;
+    height: 15%;
+    background-image: url('project://database/Assets/Gentleland/SteampunkUI/Art/Steampunk_UI_Buttons_1.png?fileID=6891791666857573563&guid=9291b39306d4ce640bf255c16c6ddf5b&type=3#Steampunk_UI_Buttons_1_1');
+    -unity-slice-scale: 0.4px;
+    border-top-left-radius: 7%;
+    border-top-right-radius: 7%;
+    border-bottom-right-radius: 7%;
+    border-bottom-left-radius: 7%;
+    left: auto;
+    right: 20%;
+    font-size: 40px;
+    color: rgb(255, 188, 145);
+    -unity-font: url('project://database/Assets/Gentleland/SteampunkUI/Fonts/Arvo/Arvo.ttf?fileID=12800000&guid=e5c356a4b721b024daa3ce4df25a2a24&type=3#Arvo');
+    -unity-font-style: bold;
+    -unity-font-definition: initial;
+    cursor: initial;
+    display: flex;
+    visibility: visible;
+    overflow: visible;
+}
+
+.Button:active {
+    width: 25%;
+    height: 15%;
+    background-image: url('project://database/Assets/Gentleland/SteampunkUI/Art/Steampunk_UI_Alternative_Colors_3.png?fileID=-3566595149302162515&guid=0bfe7a2d4a8de314bbf0f670d78a6cd2&type=3#Steampunk_UI_Alternative_Colors_3_2');
+    -unity-slice-scale: 0.4px;
+    border-top-left-radius: 7%;
+    border-top-right-radius: 7%;
+    border-bottom-right-radius: 7%;
+    border-bottom-left-radius: 7%;
+    left: auto;
+    right: 20%;
+    font-size: 40px;
+    color: rgb(146, 101, 73);
+    -unity-font: url('project://database/Assets/Gentleland/SteampunkUI/Fonts/Arvo/Arvo.ttf?fileID=12800000&guid=e5c356a4b721b024daa3ce4df25a2a24&type=3#Arvo');
+    -unity-font-style: bold;
+    -unity-font-definition: initial;
+    cursor: initial;
+    display: flex;
+    visibility: visible;
+    overflow: visible;
 }
