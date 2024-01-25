@@ -5,22 +5,48 @@ using UnityEngine.UIElements;
 
 public class UIManager : MonoBehaviour
 {
-    private UIDocument uiDoc;
-    private VisualElement root;
-    private Button login_Button;
+    [SerializeField]
+    private UIDocument[] uiDocs;
 
     void Start()
     {
-        uiDoc = GetComponent<UIDocumentPortrais>();
-        root = uiDoc.rootVisualElement;
-        Debug.Log(root.name);
-        login_Button = root.Q<Button>("Login");
-
-        login_Button.clicked += Login;
+        for (int i = 0; i < uiDocs.Length; i++)
+        {
+            //SetUIDoc(uiDocs[i]);
+        }
     }
 
-    private void Login()
+    void Update()
+    {
+        float ratio = (float)Screen.width/(float)Screen.height;
+        ToggleUIDoc(ratio);
+    }
+
+    private void SetUIDoc(UIDocument uiDoc)
+    {
+        uiDoc = GetComponent<UIDocument>();
+        VisualElement root = uiDoc.rootVisualElement;
+        Button login_Button = root.Q<Button>("Login");
+
+        //login_Button.clicked += Login;
+    }
+
+    private void Login(VisualElement root)
     {
         root.style.display = DisplayStyle.None;
+    }
+
+    private void ToggleUIDoc(float ratio)
+    {
+        if (ratio > 2)
+        {
+            uiDocs[0].rootVisualElement.style.display = DisplayStyle.Flex;
+            uiDocs[1].rootVisualElement.style.display = DisplayStyle.None;
+        }
+        else
+        {
+            uiDocs[1].rootVisualElement.style.display = DisplayStyle.Flex;
+            uiDocs[0].rootVisualElement.style.display = DisplayStyle.None;
+        }
     }
 }
