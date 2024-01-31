@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     {
         for (int i = 0; i < uiDocs.Length; i++)
         {
-            //SetUIDoc(uiDocs[i]);
+            SetUIDoc(uiDocs[i]);
         }
     }
 
@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour
         VisualElement root = uiDoc.rootVisualElement;
         Button login_Button = root.Q<Button>("Login");
 
-        //login_Button.clicked += Login;
+        login_Button.clicked += () => Login(root);
     }
 
     private void Login(VisualElement root)
