@@ -10,21 +10,26 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i < uiDocs.Length; i++)
-        {
-            SetUIDoc(uiDocs[i]);
-        }
+        float ratio = (float)Screen.width / (float)Screen.height;
+        ToggleUIDoc(ratio);
     }
 
     void Update()
     {
-        float ratio = (float)Screen.width/(float)Screen.height;
-        ToggleUIDoc(ratio);
+        if (Input.deviceOrientation == DeviceOrientation.Portrait)
+        {
+            float ratio = (float)Screen.width / (float)Screen.height;
+            ToggleUIDoc(ratio);
+        }
+        else if (Input.deviceOrientation == DeviceOrientation.LandscapeLeft|| Input.deviceOrientation == DeviceOrientation.LandscapeRight)
+        {
+            float ratio = (float)Screen.width / (float)Screen.height;
+            ToggleUIDoc(ratio);
+        }
     }
 
     private void SetUIDoc(UIDocument uiDoc)
     {
-        uiDoc = GetComponent<UIDocument>();
         VisualElement root = uiDoc.rootVisualElement;
         Button login_Button = root.Q<Button>("Login");
 
@@ -42,11 +47,13 @@ public class UIManager : MonoBehaviour
         {
             uiDocs[0].rootVisualElement.style.display = DisplayStyle.Flex;
             uiDocs[1].rootVisualElement.style.display = DisplayStyle.None;
+            SetUIDoc(uiDocs[0]);
         }
         else
         {
             uiDocs[1].rootVisualElement.style.display = DisplayStyle.Flex;
             uiDocs[0].rootVisualElement.style.display = DisplayStyle.None;
+            SetUIDoc(uiDocs[1]);
         }
     }
 }
